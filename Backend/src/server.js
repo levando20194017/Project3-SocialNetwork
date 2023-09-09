@@ -4,18 +4,6 @@ import viewEngine from "./config/viewEngine";
 import initWebRoutes from "./route/web";
 import connectDB from "./config/connectDB";
 import cors from 'cors';
-//const ytdl = require('ytdl-core');
-// ytdl.getBasicInfo('https://www.youtube.com/watch?v=YV_U70X1Rsk&list=RD1pquvJRgIMY&index=22', (err, info) => {
-//     if (err) {
-//         console.error(err);
-//         return;
-//     }
-//     const durationInSeconds = info.length_seconds;
-//     const hours = Math.floor(durationInSeconds / 3600);
-//     const minutes = Math.floor((durationInSeconds - hours * 3600) / 60);
-//     const seconds = durationInSeconds - hours * 3600 - minutes * 60;
-//     console.log(`Duration: ${hours}:${minutes}:${seconds}`);
-// });
 require('dotenv').config();
 const session = require('express-session');
 
