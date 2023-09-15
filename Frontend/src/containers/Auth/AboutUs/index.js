@@ -92,8 +92,7 @@ class AboutUS extends Component {
                         </div>
                         <div className='col-6'>
                             <div>
-                                <h5>Website learn programming - CodeCrush</h5>
-                                <p>Website có lấy 1 phần ý tưởng từ <b>F8</b>.</p>
+                                <h5>Website social network - CodeCrush</h5>
                                 <p><b>Các chức năng mà trang web có.</b></p>
                                 <p style={{ color: "#ff652f" }}><b>Về phía người dùng.</b></p>
                                 <p>- Đăng kí, đăng nhập, thay đổi ảnh đại diện, thay đổi mật khẩu.</p>
@@ -101,16 +100,11 @@ class AboutUS extends Component {
                                 <p>- Đăng bài viết, bình luận, chỉnh sửa bài viết và chỉnh sửa bình luận.</p>
                                 <p>- Người dùng có thể xóa bài viết của mình, tuy nhiên thì họ không có quyền thực hiện điều đó đối với người khác.</p>
                                 <p>- Like bài viết, like bình luận.</p>
-                                <p>- Đăng kí khóa học miễn phí với, học lần lượt theo từng video bài giảng, không được phép học vượt.</p>
-                                <p style={{ lineHeight: "1.5" }}>Ở đây, do đang quá trình test nên tôi để người dùng hoàn thành 10% thời lượng video thì sẽ được xét là hoàn thành bài học đấy.</p>
-                                <p>- Xem được các danh sách khóa học mà mình đăng kí và tiến trình của khóa học ở thanh header.</p>
-                                <p style={{ lineHeight: "1.5" }}>- Có tiến trình của người dùng đối với mỗi khóa học, tức là khi hoàn thành 1 video thì nó sẽ cập nhật theo từng phần trăm hoàn thành và giống với <b>F8</b>.</p>
+
                                 <p style={{ color: "#ff652f" }}><b>Về phía Quản trị viên.</b></p>
                                 <p>- Khi người dùng đăng nhập với tài khoản admin thì nó sẽ tự động chuyển sang trang quản lí.</p>
-                                <p>- Ở trang này thì admin có thể quản lí thành viên và quản lí khóa học</p>
                                 <p>- Admin có thể thêm, sửa, xóa thành viên hoặc có thể chỉnh sửa cho người đấy lên làm quản trị.</p>
-                                <p>- Thêm, sửa, xóa các khóa học, bài giảng và các danh sách video theo từng bài giảng.</p>
-                                <p><b>Note:</b> Video thêm vào ở đây là được lấy từ videoID của youtube.</p>
+
                                 <h5>Ngôn ngữ và công nghệ sử dụng để tạo nênn website này</h5>
                                 <p>- <b>Back-end</b>: + Công cụ quản lí cơ sở dữ liệu DBeaver, Hệ quản trị cơ sở dữ liệu PostgreSQL.</p>
                                 <p>+ Framework: Express.</p>

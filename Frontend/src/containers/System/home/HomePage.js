@@ -38,11 +38,7 @@ class HomePage extends Component {
                         <img src="./assets/img/Code-typing-rafiki.png" alt="img" class="homepage-right-img" />
                     </div>
                     <div id='homepage-slogan'>
-                        <h1 id='homepage-h1'>
-                            Học lập trình<br />mọi lúc,<br />mọi nơi!
-                        </h1>
                         <p>
-                            Website học lập trình CodeCrush - Học lập trình để đi làm.<br />
                         </p>
                         <Link to="/login">
                             <div id='homepage-login_button'>

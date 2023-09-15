@@ -156,9 +156,6 @@ class userHeader extends Component {
 
                 <div id="headerUser-center">
                     <ul id="headerUser-nav">
-                        <Link to="/home" onClick={() => window.scrollTo(0, 0)}>
-                            <li ><a >HOME</a></li>
-                        </Link>
                         <Link to='/blog' onClick={() => window.scrollTo(0, 0)}>
                             <li ><a >BLOG</a></li>
                         </Link>
@@ -172,47 +169,6 @@ class userHeader extends Component {
                     <ul id='headerUser-right-nav'>
                         {this.userData.isLoggedIn ? <div>
                             <div className="dropdown">
-                                {/* style={{ fontSize: "13px", fontWeight: "600",color: "#ff652f"  }} */}
-                                {/* background: linear-gradient(83.84deg, #0088FF -6.87%, #A033FF 26.54%, #FF5C87 58.58%);
-                                background-clip: text;color: "#ff652f"
-                                color: transparent; */}
-                                <div style={{fontSize: "13px", fontWeight: "600", color: "#ff652f"}} className="btn-myCourse-header btn btn-secondary-soft-hover py-1 px-2" id="cardFeedAction" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Khóa học của tôi
-                                </div>
-
-                                <div className="dropdown-menu dropdown-menu-end" aria-labelledby="cardFeedAction" style={{ width: "400px" }}>
-                                    <div className='dropdown-item d-flex' style={{ justifyContent: "space-between" }}>
-                                        <div style={{ fontWeight: "bold", color: "black" }}>Khóa học của tôi</div>
-                                        <Link to="/mycourses" onClick={() => window.scrollTo(0, 0)}>
-                                            <div style={{ fontSize: "12px", color: "orange", cursor: "pointer" }}>Xem tất cả</div>
-                                        </Link>
-                                    </div>
-                                    <div><hr className="dropdown-divider" /></div>
-                                    {listCoursesRegister && listCoursesRegister.map((course) => {
-                                        return (
-                                            <Link to={`/learn/${course.id}`} onClick={() => window.scrollTo(0, 0)}>
-                                                <div className="dropdown-item">
-                                                    <div className='d-flex course-item'>
-                                                        <img src={course.img_url} width={110} height={60} style={{ borderRadius: "5px" }} />
-                                                        <div style={{ marginLeft: "10px" }}>
-                                                            <div style={{ fontSize: "15px", color: "black", fontWeight: "600" }}> {course.title}</div>
-                                                            <div style={{ fontSize: "14px", marginTop: "3px" }}>Ngày đăng kí: {moment(`${course.createdAt}`).format('DD/MM/YYYY')}.</div>
-                                                            {course.percentCompleted ? <div className="progress-container">
-                                                                <progress className="progress-bar" value={course.percentCompleted} max="100"></progress>
-                                                                <span className="progress-value">{course.percentCompleted}%</span>
-                                                            </div> : <div style={{ fontSize: "14px", color: "orange" }}>Bạn chưa học khóa này</div>}
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </Link>
-                                        )
-                                    })}
-                                    {this.state.isLoading &&
-                                        <div style={{ justifyContent: "center", display: "flex" }}>
-                                            <div className="spinner"></div>
-                                        </div>
-                                    }
-                                </div>
                             </div>
                             <li>
                                 <div className="dropdown">

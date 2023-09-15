@@ -53,7 +53,7 @@ class App extends Component {
                                 <span className="content-container">
 
                                     <Switch>
-                                        <Route path={path.HOME} exact component={HomePage} />
+                                        <Route path={path.HOME} exact component={Login} />
                                         <Route path={"/forgotpassword"} component={ForgotPassword} />
                                         <Route path={"/signup"} component={SignUp} />
                                         <Route path={"/changepassword"} component={ChangePassword} />

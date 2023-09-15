@@ -22,7 +22,7 @@ class SystemOfUser extends Component {
         return (
 
             <span className="content-container">
-                {this.userData.isLoggedIn && <D_header_user />}
+                {/* {this.userData.isLoggedIn && <D_header_user />} */}
                 <Switch>
                     {/* <Route path="/system/home" component={Home} /> */}
                     {/* <Route path={path.HOME} exact component={HomePage} /> */}
