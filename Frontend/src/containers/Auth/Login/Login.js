@@ -88,7 +88,7 @@ class Login extends Component {
                     // this.props.history.push('/system/user-manage')
                 } else {
                     this.props.userLoginSuccess(data.user)
-                    this.props.history.push('/home');
+                    this.props.history.push('/blog');
                     window.location.reload();
                 }
                 console.log('login success')

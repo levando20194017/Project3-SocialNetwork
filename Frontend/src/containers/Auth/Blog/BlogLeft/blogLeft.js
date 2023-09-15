@@ -5,6 +5,8 @@ import { getAllPostById } from '../../../../services/postService';
 import { Link } from 'react-router-dom';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import * as actions from '../../../../store/actions'
+
 class BlogLeft extends Component {
 
     constructor(props) {
@@ -18,7 +20,7 @@ class BlogLeft extends Component {
     userData = JSON.parse(localStorage.getItem("persist:user"));
     userInfo = JSON.parse(this.userData.userInfo);
     componentDidMount() {
-        this.fetchData(this.userInfo.id);
+        this.fetchData(this.userInfo?.id);
 
     }
 
@@ -42,6 +44,7 @@ class BlogLeft extends Component {
 
 
     render() {
+        const { processLogout, userInfo } = this.props;
         return (
             <>
                 <div className="col-lg-3">
@@ -57,12 +60,12 @@ class BlogLeft extends Component {
                                         <div className="h-50px"></div>
                                         <div className="text-center">
                                             <div className="avatar avatar-lg mt-n5 mb-3">
-                                                <Link to={`/profile/${this.userInfo.id}`} onClick={() => window.scrollTo(0, 0)}>
-                                                    <img className="rounded-circle" src={this.userInfo.img_url} alt="Avatar" width={75} height={75} />
+                                                <Link to={`/profile/${this.userInfo?.id}`} onClick={() => window.scrollTo(0, 0)}>
+                                                    <img className="rounded-circle" src={this.userInfo?.img_url} alt="Avatar" width={75} height={75} />
                                                 </Link>
                                             </div>
                                             <h5 className="mb-0">
-                                                <Link to={`/profile/${this.userInfo.id}`} style={{ textDecoration: "none", color: "black" }} onClick={() => window.scrollTo(0, 0)}>{this.userInfo.fullName}</Link>
+                                                <Link to={`/profile/${this.userInfo?.id}`} style={{ textDecoration: "none", color: "black" }} onClick={() => window.scrollTo(0, 0)}>{this.userInfo?.fullName}</Link>
                                             </h5>
                                             <div className="d-flex hstack gap-2 gap-xl-3 justify-content-center mt-3">
                                                 <div>
@@ -82,14 +85,7 @@ class BlogLeft extends Component {
                                             </div>
                                             <hr />
                                             <ul className="nav nav-link-secondary flex-column fw-bold gap-2">
-                                                <li className="nav-item">
-                                                    <Link to="/home" style={{ color: "black" }} onClick={() => window.scrollTo(0, 0)}>
-                                                        <a className="nav-link">
-                                                            <i className="bi bi-house-heart-fill me-2 h-20px fa-fw"></i>
-                                                            <span>Home</span>
-                                                        </a>
-                                                    </Link>
-                                                </li>
+
                                                 <li className="nav-item">
                                                     <Link to="/blog" style={{ color: "black" }} onClick={() => window.scrollTo(0, 0)}>
                                                         <a className="nav-link">
@@ -107,15 +103,17 @@ class BlogLeft extends Component {
                                                     </Link>
                                                 </li>
                                                 <li className="nav-item">
-                                                    <a className="nav-link">
-                                                        <i className="bi bi-box-arrow-right"></i>
-                                                        <span> Log out</span>
-                                                    </a>
+                                                    <Link to="/login" onClick={processLogout}>
+                                                        <a className="nav-link">
+                                                            <i className="bi bi-box-arrow-right"></i>
+                                                            <span> Log out</span>
+                                                        </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className="card-footer text-center py-2">
-                                            <Link to={`/profile/${this.userInfo.id}`} onClick={() => window.scrollTo(0, 0)}>
+                                            <Link to={`/profile/${this.userInfo?.id}`} onClick={() => window.scrollTo(0, 0)}>
                                                 <a className="btn btn-link btn-sm text-primary">View profile</a>
                                             </Link>
                                         </div>
@@ -153,13 +151,14 @@ class BlogLeft extends Component {
 
 const mapStateToProps = state => {
     return {
-
+        isLoggedIn: state.user.isLoggedIn,
+        userInfo: state.user.userInfo
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
+        processLogout: () => dispatch(actions.processLogout()),
     };
 };
-
 export default connect(mapStateToProps, mapDispatchToProps)(BlogLeft);

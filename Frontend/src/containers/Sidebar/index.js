@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import * as actions from "../../store/actions";
 import '../../assets/css/app.scss'
-
+import { Link } from 'react-router-dom';
 class Sidebar extends Component {
 
     constructor(props) {
@@ -79,34 +79,12 @@ class Sidebar extends Component {
                                                 <span style={{ marginLeft: "110px", fontSize: "120%" }}>{this.state.showMenu[0] ? <i class="fas fa-caret-up"></i> : <i class="fas fa-caret-down"></i>}</span>
                                             </a>
                                             <ul className="sub-menu">
-                                                <li><a href="http://localhost:3000/system/user-manage">Manage users</a></li>
-                                                <li><a href="#">User progress</a></li>
-                                                <li><a href="#">Notifications</a></li>
+                                                <Link to='/system/user-manage'>
+                                                    <li><a>Manage users</a></li>
+                                                </Link>
                                             </ul>
                                         </li>
-                                        <li className="parent">
-                                            <a href="#">
-                                                <i class="fab fa-leanpub" style={{ fontSize: "110%" }}></i>
-                                                <span style={{ marginLeft: "9px", fontSize: "15px" }}>Courses</span>
-                                                <span style={{ marginLeft: "92px", fontSize: "120%" }}>{this.state.showMenu[1] ? <i class="fas fa-caret-up"></i> : <i class="fas fa-caret-down"></i>}</span>
-                                            </a>
-                                            <ul className="sub-menu">
-                                                <li><a href="http://localhost:3000/system/course-manage">Manage courses</a></li>
-                                                <li><a href="#">Manage lessons</a></li>
-                                                <li><a href="#">Manage videos</a></li>
-                                            </ul>
-                                        </li>
-                                        <li className="parent">
-                                            <a href="#">
-                                                <i class="fas fa-comment-alt" style={{ fontSize: "110%" }}></i>
-                                                <span style={{ marginLeft: "13px", fontSize: "15px" }}>Posts</span>
-                                                <span style={{ marginLeft: "108px", fontSize: "120%" }}>{this.state.showMenu[2] ? <i class="fas fa-caret-up"></i> : <i class="fas fa-caret-down"></i>}</span>
-                                            </a>
-                                            <ul className="sub-menu">
-                                                <li><a href="#">Manage posts</a></li>
-                                                <li><a href="#">Manage comments</a></li>
-                                            </ul>
-                                        </li>
+
                                     </ul>
                                 </div>
                             </div>

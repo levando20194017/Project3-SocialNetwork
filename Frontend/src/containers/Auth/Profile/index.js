@@ -12,7 +12,7 @@ class Profile extends Component {
     }
     render() {
         return (
-            <div className="profile-page-container" style={{ marginTop: "56px" }}>
+            <div className="profile-page-container">
                 <div className="container">
                     <Information userID={this.props.match.params.id} />
                     <PostSubmission />

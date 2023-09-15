@@ -405,8 +405,8 @@ class BlogCenter extends Component {
                     <div className="cardx card card-body">
                         <div className="d-flex mb-3">
                             <div className="avatar avatar-xs me-2">
-                                <Link to={`/profile/${this.userInfo.id}`} onClick={() => window.scrollTo(0, 0)}>
-                                    <img className="avatar-img rounded-circle" src={this.userInfo.img_url} alt="Avatar" />
+                                <Link to={`/profile/${this.userInfo?.id}`} onClick={() => window.scrollTo(0, 0)}>
+                                    <img className="avatar-img rounded-circle" src={this.userInfo?.img_url} alt="Avatar" />
                                 </Link>
 
                             </div>
